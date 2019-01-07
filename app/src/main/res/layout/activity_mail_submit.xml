@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_grey"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/include_car_info"
+                    android:id="@+id/car_info"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/common_margin10"
+                        android:text="上传邮寄资料(选填)"
+                        android:textColor="@color/grey_ACB5B9"
+                        android:textSize="@dimen/font_header_size"
+                        />
+
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+                    <!--钥匙-->
+                    <FrameLayout
+                        android:id="@+id/key_choose_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height45"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="@dimen/common_margin10"
+                            android:text="钥匙"
+                            android:textColor="@color/black_2D3133"
+                            android:textSize="@dimen/text_size16"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="@dimen/common_margin10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/choosen_key_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="请选择寄出钥匙数量"
+                                android:textColor="@color/gray_AFAFAF"
+                                android:textSize="@dimen/text_size16"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/small_padding5"
+                                android:src="@drawable/right_arrow"
+                                />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+                    <!--合格证-->
+
+                    <include
+                        layout="@layout/include_item_check"
+                        android:id="@+id/check_certificate"
+                        />
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+
+                    <!--一致性证书-->
+                    <include
+                        layout="@layout/include_item_check"
+                        android:id="@+id/check_constant"
+                        />
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+                    <!--商检书-->
+                    <include
+                        layout="@layout/include_item_check"
+                        android:id="@+id/check_checklist"
+                        />
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+                    <!--说明书-->
+                    <include
+                        layout="@layout/include_item_check"
+                        android:id="@+id/check_document"
+                        />
+                    <include
+                        layout="@layout/include_line_horizontal"
+                        />
+                    <!--快递单号-->
+
+
+                    <FrameLayout
+                        android:id="@+id/item_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height45"
+                        >
+
+                        <TextView
+                            android:id="@+id/title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="@dimen/common_margin10"
+                            android:textColor="@color/black_2D3133"
+                            android:text="快递单号"
+                            android:textSize="@dimen/text_size16"
+                            />
+
+                        <EditText
+                            android:id="@+id/express_no_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="130dp"
+                            android:padding="10dp"
+                            android:hint="请输入快递单号"
+                            android:background="@color/white"
+                            android:imeOptions="actionDone"
+                            android:layout_gravity="center_vertical"
+                            android:textColorHint="@color/gray_AFAFAF"
+                            android:textCursorDrawable="@null"
+                            android:textColor="@color/black_626262"
+                            android:textSize="@dimen/text_size16"
+                            />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:text="确认提交"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="bottom"
+                    style="@style/sure_button"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+
+</layout>

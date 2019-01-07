@@ -1,0 +1,177 @@
+ext.moduleName = getName()
+ext.isModuleIndependent = moduleName == singleModuleKey.toString()
+
+//通用的依赖
+if (isModuleIndependent) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+/**
+ * 子模块的通用配置
+ */
+def commonConfigure = {
+    android.with {
+        compileSdkVersion rootProject.ext.android.compileSdkVersion
+        publishNonDefault true
+        defaultPublishConfig "debug"
+
+        defaultConfig.with {
+            minSdkVersion rootProject.ext.android.minSdkVersion
+            targetSdkVersion rootProject.ext.android.targetSdkVersion
+            versionCode rootProject.ext.android.versionCode
+            versionName rootProject.ext.android.versionName
+            multiDexEnabled true
+            javaCompileOptions {
+                annotationProcessorOptions.includeCompileClasspath = true
+            }
+            ndk {
+                //设置支持的SO库架构
+                abiFilters "armeabi-v7a"
+//                abiFilters "armeabi-v7a", "x86","arm64-v8a","x86_64"
+            }
+        }
+
+        buildTypes {
+            pre.initWith(buildTypes.release)
+        }
+        buildTypes.with {
+            debug.with {
+                minifyEnabled false
+                versionNameSuffix '-DEBUG'
+                buildConfigField("String", "HOST", debugHost)
+                buildConfigField("String", "WEB_HOST", debugWebHost)
+            }
+            release.with {
+                buildConfigField("String", "HOST", releaseHost)
+                buildConfigField("String", "WEB_HOST", releaseWebHost)
+            }
+            pre.with {
+                versionNameSuffix '-PRE'
+                buildConfigField("String", "HOST", preHost)
+                buildConfigField("String", "WEB_HOST", preWebHost)
+            }
+        }
+
+        sourceSets.with {
+            main.with {
+                jniLibs.srcDirs = ['libs']
+                java.srcDirs += ['src/main/java', 'src/main/kotlin']
+            }
+        }
+
+        lintOptions.with {
+            abortOnError false
+        }
+
+        dataBinding.with {
+            enabled = true
+        }
+
+    }
+
+    dependencies.with {
+        compile fileTree(include: ['*.jar'], dir: 'libs')
+    }
+    repositories.with {
+        mavenCentral()
+    }
+}
+
+/**
+ * 作为独立的app运行时的配置
+ */
+def appConfigure = {
+    //作为独立的module进行编译的时候
+    if (isModuleIndependent) {
+        def keystoreProperties = new Properties()
+        keystoreProperties.load(new FileInputStream(rootProject.file("keystore.properties")))
+        android.with {
+            signingConfigs {
+                config {
+                    keyAlias keystoreProperties['keyAlias']
+                    keyPassword keystoreProperties['keyPassword']
+                    storeFile file(keystoreProperties['storeFile'])
+                    storePassword keystoreProperties['storePassword']
+                }
+            }
+
+            defaultConfig.with {
+                resConfigs "zh"
+                manifestPlaceholders.put("appName", moduleName)
+                manifestPlaceholders.put("categoryName", 'android.intent.category.LAUNCHER')
+            }
+            buildTypes.with {
+                release.with {
+                    //签名配置
+                    signingConfig = signingConfigs.config
+                    //混淆打开
+                    minifyEnabled true
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                    //ZipAlign优化
+                    zipAlignEnabled true
+                    //移除无用的resource文件
+                    shrinkResources true
+                }
+                pre.with {
+                    //签名配置
+                    signingConfig = signingConfigs.config
+                    //混淆打开
+                    minifyEnabled true
+                    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                    //ZipAlign优化
+                    zipAlignEnabled true
+                    //移除无用的resource文件
+                    shrinkResources true
+                }
+            }
+
+            dexOptions.with {
+                javaMaxHeapSize "12g"
+                jumboMode true
+                preDexLibraries false
+            }
+        }
+
+    }
+    //作为子模块时，需要把manifest中的启动页和application的一些属性移除。
+    else {
+        android.with {
+            defaultConfig.with {
+                manifestPlaceholders.put("appName", '卖好车')
+                manifestPlaceholders.put("categoryName", 'android.intent.category.CATEGORY_SAMPLE_CODE')
+            }
+        }
+    }
+}
+/**
+ *  retrolambda的配置.需要在主要工程的build.gradle的buildscript->dependencies中添加"classpath 'me.tatarka:gradle-retrolambda:3.6.1'"
+ */
+ext.addRetrolambda = {
+    android.with {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+}
+
+/** 作为app独立编译时的一些全局的配置
+ */
+ext.globleConfigure = {
+    try {
+        commonConfigure()
+        appConfigure()
+        addRetrolambda()
+    } catch (Exception e) {
+        throw new Exception("globleConfigure 配置出错。详情e:" + e.getMessage())
+    }
+}
+
+
+
+
+
+

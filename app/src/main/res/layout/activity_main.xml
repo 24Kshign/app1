@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        style="@style/RecyclerViewBaseStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_grey"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size40"
+                android:gravity="center"
+                android:textColor="@color/black_626262"
+                android:textSize="@dimen/text_size16"
+                tools:text="gzw,欢迎回来" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:gravity="center"
+                    android:text="入库管理"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size17" />
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/instock_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_instock"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="入库"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                    <include layout="@layout/include_line_vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/checkin_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_checkin"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="验车"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/include_line_horizontal" />
+
+            </LinearLayout>
+
+            <!-- 在库管理 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:gravity="center"
+                    android:text="在库管理"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size17" />
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/car_instock_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_car_instock"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="车辆"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                    <include layout="@layout/include_line_vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/stocktake_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_stocktake"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="盘点"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/include_line_horizontal" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <FrameLayout
+                    android:id="@+id/seat_table_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/storage_seat"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="平面图"
+                        android:textColor="@color/black_373737"
+                        android:textSize="@dimen/text_size17" />
+                </FrameLayout>
+
+                <include layout="@layout/include_line_vertical" />
+
+                <FrameLayout
+                    android:id="@+id/see_car"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/see_car_icon"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="看车"
+                        android:textColor="@color/black_373737"
+                        android:textSize="@dimen/text_size17" />
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+
+            <!-- 出库管理 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/big_margin15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:gravity="center"
+                    android:text="出库管理"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size17" />
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/check_out_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_checkout"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="出库"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <include layout="@layout/include_line_horizontal" />
+
+            </LinearLayout>
+
+            <!-- 其他管理 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_big20"
+                android:layout_marginTop="@dimen/big_margin15"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:gravity="center"
+                    android:text="其他"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size17" />
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/data_statistics_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_data_statistics"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="数据统计"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                    <include layout="@layout/include_line_vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/data_init_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_data_init"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="条码绑定"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/include_line_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:id="@+id/help_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_help"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="帮助中心"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                    <include layout="@layout/include_line_vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/config_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_config"
+                            android:drawablePadding="6dp"
+                            android:gravity="center"
+                            android:text="设置"
+                            android:textColor="@color/black_373737"
+                            android:textSize="@dimen/text_size17" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/include_line_horizontal" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

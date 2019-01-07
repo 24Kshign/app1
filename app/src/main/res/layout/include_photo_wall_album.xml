@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/photo_wall_pop"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:background="@color/transparent"
+                  android:orientation="vertical"
+                  android:paddingBottom="30dp"
+                  android:paddingLeft="30dp"
+                  android:paddingRight="30dp"
+                  android:paddingTop="37dp"
+                  android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="-1.5dp"
+            android:src="@drawable/pop_arrow"/>
+
+        <ListView
+            android:id="@+id/album_list"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_card_background"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:listSelector="@drawable/selector_item_bg"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:scrollingCache="true"
+            android:smoothScrollbar="true"/>
+
+    </LinearLayout>
+</layout>

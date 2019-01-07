@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>helloBridge</title>
+</head>
+<body>
+
+
+<p>
+    测试须知：需同时测试ios和安卓手机下的响应，对比点击后的响应数据，务必安两个系统返回的格式和内容一致
+</p>
+
+
+<button onClick=toGetData('userInfo')>getData获取用户数据 必要参数: 手机号 userid token</button>
+<br/>
+
+<button onClick=toGetData('version')>getData获取数据 version</button>
+<br/>
+
+
+<button onClick=toGoNative('native://LoginActivity')> 安卓 goNative 去某个页面 native://LoginActivity
+</button>
+<br/>
+
+<button onClick=toGoNative('native://LoanCommitActivity?product_id=22&cate_id=2&loanName=公积金多腿测试&index_source=1')>
+    安卓去某个页面带参数 native://LoanCommitActivity?product_id=22&cate_id=2&loanName=公积金多腿测试&index_source=1
+</button>
+<br/>
+
+
+<button onClick=toGoNative('native://login')> 苹果 去某个页面 native://login</button>
+<br/>
+
+<button onClick=toGoNative('native://BindBankCard?cardType=1')> 苹果 跳转参数
+    Native://BindBankCard?cardType=1
+</button>
+<br/>
+
+<button onClick=toGoNative('native://BindBankCard?cardType=0')> 苹果 跳转参数
+    Native://BindBankCard?cardType=0
+</button>
+<br/>
+
+
+<button onClick=toSetRightBtn('客服','http://www.baidu.com','')>设置页面右上角按钮 跳转百度 空图标</button>
+<br/>
+
+<button onClick=toSetRightBtn('登录','native://LoginActivity','https://mifengkongdemo.oss-cn-shenzhen.aliyuncs.com/fr_public_666610/10_64b97145a5c8d12787e854fe31d95f63.png')>
+    设置页面右上角按钮 有小图标 跳转登录
+</button>
+<br/>
+
+<button onClick=toGetWebviewData()>toGetWebviewData,设置成功会有消息提示</button>
+<br/>
+
+<button onClick=toShareAn()>安卓分享</button>
+<br/>
+<button onClick=toShareiOS()>苹果分享</button>
+<br/>
+<button onClick=closeWebView()>关闭webview</button>
+<br/>
+<button onClick=customeSerive()>咨询客服</button>
+<button onClick=touserAgent()>弹出 userAgent</button>
+<br/>
+
+</body>
+
+<script type="text/javascript">
+
+    /*场景：一开始进来就请求*/
+
+
+    //注册事件监听
+    function connectWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge)
+        } else {
+            document.addEventListener(
+                'WebViewJavascriptBridgeReady'
+                , function () {
+                    callback(WebViewJavascriptBridge)
+                },
+                false
+            );
+        }
+    }
+
+    /*
+     * native://login
+     native://myQuota
+     native://confirmIdentity
+     native://verifyCreditCard
+     native://verifyProvidentFund
+     native://productDetails
+     native://myMessage*/
+    //注册回调函数，第一次连接时调用 初始化函数
+    connectWebViewJavascriptBridge(function (bridge) {
+        //初始化
+        bridge.init(function (message, responseCallback) {
+            var data = {
+                'Javascript Responds': 'Wee!'
+            };
+            responseCallback(data);
+        });
+    });
+
+
+    var setupWebViewJavascriptBridge = function (callback) {
+        if (window.WebViewJavascriptBridge) {
+            return callback(WebViewJavascriptBridge);
+        }
+        if (window.WVJBCallbacks) {
+            return window.WVJBCallbacks.push(callback);
+        }
+        window.WVJBCallbacks = [callback];
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function () {
+            document.documentElement.removeChild(WVJBIframe)
+        }, 0)
+    };
+
+
+    var frBridge = function (api, parameter, callback) {
+        /*
+         *  api: 接口名称
+         *  parameter: 参数
+         *  callBack: 回调函数
+         * */
+
+        setupWebViewJavascriptBridge(function (bridge) {
+            bridge.callHandler(api, parameter, callback)
+        });
+    };
+
+    frBridge('getData', {
+        type: 'userInfo'
+    }, function (ret) {
+        alert('页面进来时请求的数据：' + JSON.stringify(ret))
+    })
+
+
+    toGetData = function (type) {
+        frBridge('getData', {
+            type: type
+        }, function (ret) {
+
+            alert('触发了回调，下一步显示返回内容' + JSON.stringify(ret))
+        })
+    };
+
+    toGetLocation = function () {
+        frBridge('getLocation', {}, function (ret) {
+            alert('触发了回调，下一步显示返回内容' + JSON.stringify(ret))
+        })
+    };
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("用户拒绝对获取地理位置的请求。")
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("位置信息是不可用的。")
+                break;
+            case error.TIMEOUT:
+                alert("请求用户地理位置超时。")
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("未知错误。")
+                break;
+        }
+    }
+
+    function showPosition(position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        alert('纬度' + lat + "," + "经度" + lng);
+    }
+
+
+    toGetLocationjs = function () {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert('该浏览器不支持地理位置!');
+        }
+
+    };
+
+
+    toGoNative = function (pageName) {
+        frBridge('goNative', {
+            pageName: pageName,
+        }, function (ret) {
+            alert('触发了回调，下一步显示返回内容' + JSON.stringify(ret))
+        })
+    };
+
+    toSetRightBtn = function (text, url, iconUrl) {
+        frBridge('setRightBtn', {
+            text: text,
+            url: url, /*或者 native://login 支持跳转到H5页面或者原生界面*/
+            iconUrl: iconUrl, /*或者 native://login 支持跳转到H5页面或者原生界面*/
+        }, function (ret) {
+            alert('触发了回调，下一步显示返回内容' + JSON.stringify(ret))
+        })
+    };
+
+    closeWebView = function (text, url, iconUrl) {
+        frBridge('closeWebView', {
+
+        }, function (ret) {
+
+        })
+    };
+    customeSerive = function (text, url, iconUrl) {
+        frBridge('scanCode', {
+            pageName: '1',
+        }, function (ret) {
+
+        })
+    };
+
+
+
+    toGetWebviewData = function (text, url) {
+        frBridge('getWebviewData', {
+            arr: [
+                {
+                    key: 'phone',
+                    value: '1570007771'
+                }
+            ]
+
+        }, function (ret) {
+            alert('触发了回调，下一步显示返回内容' + JSON.stringify(ret))
+        })
+    };
+
+    toShareiOS = function () {
+        window.webkit.messageHandlers.NativeMethod.postMessage({
+            nativeKey: 'shard',
+            shardPicture: 'https://mfshenjianshou.oss-cn-shenzhen.aliyuncs.com/WechatIMG126.png',
+            shardTitle: '动动手指，就能在家赚钱',
+            shardDescribe: '以后在这赚大钱，工资只是小零花，大家组团一起赚零花呀！',
+            shardURL: 'http://www.baidu.com'
+        })
+    };
+
+    toShareAn = function () {
+        onCallByH5.shareView('动动手指，就能在家赚钱', '以后在这赚大钱，工资只是小零花，大家组团一起赚零花呀！', 'http://www.baidu.com', 'https://mfshenjianshou.oss-cn-shenzhen.aliyuncs.com/WechatIMG126.png');
+    }
+
+
+    touserAgent = function () {
+        alert(window.navigator.userAgent)
+    }
+
+
+
+</script>
+</html>

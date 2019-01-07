@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:minWidth="240dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="300dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_white_corner6"
+            android:orientation="vertical"
+            android:padding="@dimen/big_margin15"
+            >
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/big_margin15"
+                android:textColor="@color/black_373737"
+                android:textSize="@dimen/text_size18"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="全部车辆"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dialog_recycler_list"
+                style="@style/RecyclerViewBaseStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</layout>

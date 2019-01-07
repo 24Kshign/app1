@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_grey"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:textSize="16dp"
+            tools:text="当前网络：https://www.xxx.xxx.com" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="默认网络（点击即可更换）："
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/haimaiche"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textSize="16dp"
+            tools:text="https://wms.haimaiche.net/" />
+
+        <TextView
+            android:id="@+id/mclaren"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textSize="16dp"
+            tools:text="http://mclaren-test-wms.haimaiche.net/" />
+
+        <TextView
+            android:id="@+id/maihaoche_pre"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textSize="16dp"
+            tools:text="https://wms-pre.maihaoche.com/" />
+
+        <TextView
+            android:id="@+id/maihaoche"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:textSize="16dp"
+            tools:text="https://wms.maihaoche.com/" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="自定义网络："
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/change_net_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="请输入网络URL"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/change_net"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="确认更改"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+</layout>

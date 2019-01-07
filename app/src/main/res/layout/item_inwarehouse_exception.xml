@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding10"
+        android:paddingBottom="@dimen/common_padding10"
+        >
+        <include
+            layout="@layout/include_attr_layout"
+            android:id="@+id/report_time"
+            />
+
+        <include
+            layout="@layout/include_attr_layout"
+            android:id="@+id/operator_name"
+            />
+        <include
+            layout="@layout/include_line_horizontal"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="异常照片"
+            android:paddingLeft="@dimen/common_padding10"
+            android:layout_marginTop="@dimen/big_margin15"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/gray_AFAFAF"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/exception_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/common_padding10"
+            android:paddingRight="@dimen/common_padding10"
+            android:paddingTop="@dimen/big_margin15"
+            android:paddingBottom="@dimen/big_margin15"
+            style="@style/RecyclerViewBaseStyle"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>

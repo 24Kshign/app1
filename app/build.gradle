@@ -1,0 +1,90 @@
+apply from: "$rootProject.projectDir/$configModuleName/subModuleHeader.gradle"
+//数据库的插件
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'bugly'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+bugly {
+    appId = '12a516d184' // 注册时分配的App ID
+    appKey = '26272daa-59c4-4741-a176-05718f6ee2a0' // 注册时分配的App Key
+    uploadMapping = true
+}
+
+android {
+
+
+    buildTypes {
+        debug {
+            manifestPlaceholders = [
+                    appName    : "库管助手测试",
+                    //云信测试appKey,应用名"dawanju-test"。这个配置一定要与服务端一致。不能乱改。
+                    yunKey     : "518c1618e1fdc134e58b287e86df4a51",
+                    baiduAppKey: '4p0nSvM5BVvrcbVkCUy16BdBC8GPbLAF'
+
+            ]
+            buildConfigField("String", "DB_NAME", dbNameDebug)
+        }
+
+        release {
+            manifestPlaceholders = [
+                    appName    : "库管助手",
+                    //云信线上appKey,应用名"dawanju"。
+//                    yunKey : "518c1618e1fdc134e58b287e86df4a51",
+                    yunKey     : "d1108a4ddc883af10760ac6972a45ec3",
+                    baiduAppKey: '4p0nSvM5BVvrcbVkCUy16BdBC8GPbLAF'
+            ]
+            buildConfigField("String", "DB_NAME", dbNameRelease)
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildToolsVersion = '28.0.3'
+
+    greendao {
+        schemaVersion 5     //数据库版本号。不填写，默认是1.
+        daoPackage "com.maihaoche.volvo.dao"
+    }
+}
+
+
+
+
+dependencies {
+//    implementation rootProject.ext.dependencies.appcompat_v7
+    implementation project(':base')
+    implementation project(':commonbiz')
+    implementation rootProject.ext.dependencies.greenDao
+    implementation rootProject.ext.dependencies.rxAndroid
+    implementation rootProject.ext.dependencies.rxJava
+    implementation rootProject.ext.dependencies.qiniu
+    implementation rootProject.ext.dependencies.recyclerview
+    implementation rootProject.ext.dependencies.rxBinding
+    implementation rootProject.ext.dependencies.photoView
+    implementation rootProject.ext.dependencies.crashreport
+    implementation rootProject.ext.dependencies.design
+    implementation rootProject.ext.dependencies.MPAndroidChart
+    implementation rootProject.ext.dependencies.constraintLayout
+    implementation rootProject.ext.dependencies.leakcanary
+//    implementation rootProject.ext.dependencies.barcodescanner
+//    implementation rootProject.ext.dependencies.zxingCore
+    implementation rootProject.ext.dependencies.zxing
+//    implementation rootProject.ext.dependencies.QrCodeScanner
+//    implementation rootProject.ext.dependencies.qrcode
+    implementation project(':scanlibrary')
+    implementation project(':smartvisionlibrary')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:0.20'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:0.20'
+    compile rootProject.ext.dependencies.nimlibBasesdk
+    compile rootProject.ext.dependencies.nimlibNrtc
+    compile rootProject.ext.dependencies.nimlibAVchat
+}
+
+globleConfigure()

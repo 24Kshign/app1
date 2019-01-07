@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CellEditView">
+        <attr name="keyName" format="string"/>
+        <attr name="content" format="string"/>
+        <attr name="contenthidden" format="string"/>
+        <attr name="keyTextColor" format="color"/>
+        <attr name="contentColor" format="color"/>
+        <attr name="keyContentMargin" format="dimension"/>
+        <attr name="contentEnable" format="boolean"/>
+        <attr name="showClearIcon" format="boolean"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="cellHeight" format="dimension"/>
+        <attr name="keyWidth" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CellTextView">
+        <attr name="leftName" format="string"/>
+        <attr name="rightName" format="string"/>
+        <attr name="leftColor" format="color"/>
+        <attr name="rightColor" format="color"/>
+        <attr name="leftRightMargin" format="dimension"/>
+        <attr name="leftSize" format="dimension"/>
+        <attr name="rightSize" format="dimension"/>
+        <attr name="celHeight" format="dimension"/>
+        <attr name="leftWidth" format="dimension"/>
+
+    </declare-styleable>
+
+    <!--  录制视频 -->
+    <declare-styleable name="VideoRecord">
+        <attr name="desc" format="string"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="LabelView">
+        <!--标题-->
+        <attr name="titleName" format="string"/>
+        <!--是否显示三角形-->
+        <attr name="showToggle" format="boolean"/>
+        <!--初始化的时候是否显示内容-->
+        <attr name="showContentOnInit" format="boolean"/>
+        <!--内容的layoutId-->
+        <attr name="contentLayout" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="WheelRecyclerView">
+        <attr name="itemHeight" format="dimension"/>
+        <attr name="selectTextSize" format="dimension"/>
+        <attr name="unselectTextSize" format="dimension"/>
+        <attr name="selectTextColor" format="color"/>
+        <attr name="unselectTextColor" format="color"/>
+        <attr name="wheelOffset" format="integer"/>
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerHeight" format="dimension" />
+        <attr name="dividerColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="selectSuffix" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="IndexView">
+        <attr name="indexTextSize" format="dimension"/>
+        <attr name="indexTextColor" format="color"/>
+        <attr name="indexSelectTextColor" format="color"/>
+        <attr name="indexTouchedColor" format="color"/>
+        <attr name="indexTouchedSelectColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SeatTableView">
+        <attr name="seat_checked" format="reference" />
+        <attr name="seat_sold" format="reference" />
+        <attr name="seat_available" format="reference" />
+        <attr name="overview_checked" format="color" />
+        <attr name="overview_sold" format="color" />
+        <attr name="txt_color" format="color"/>
+    </declare-styleable>
+</resources>

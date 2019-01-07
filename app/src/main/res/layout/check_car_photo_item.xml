@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.maihaoche.volvo.view.SquareRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.maihaoche.volvo.view.ChoosePicImage
+                android:id="@+id/choose_pic_item1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/default_image1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_car1"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/choose_pic_item_delete1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:paddingBottom="7dp"
+                android:paddingLeft="7dp"
+                android:src="@drawable/icon_delete_pic"
+                android:visibility="gone" />
+        </com.maihaoche.volvo.view.SquareRelativeLayout>
+
+
+        <TextView
+            android:id="@+id/img_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:text="前45度角"
+            android:textColor="@color/black_626262"
+            android:textSize="17sp" />
+    </LinearLayout>
+</layout>

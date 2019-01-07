@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey">
+
+    <ImageView
+        android:id="@+id/amIvNotMhcStaff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/avchat_incomingcall_bg" />
+
+    <TextView
+        android:id="@+id/amTvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        tools:text="总部\n当前暂无抽检任务\n\n\n\n\n\n\n\n感谢配合!" />
+
+    <LinearLayout
+        android:id="@+id/amLlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_main_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/amTvWarehouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:drawableRight="@drawable/select_library_down_triangle"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:text="切换库"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            tools:text="成都1045仓成都1045仓成都1045仓" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/amTvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="库管助手"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/amTvSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@drawable/icon_setting"
+            android:padding="5dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/amLlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/amLlTop"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/amFlAllFunction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/bg_main_btn"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/amTvAllFunction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="9dp"
+                android:drawableTop="@drawable/icon_all_function"
+                android:gravity="center"
+                android:text="WMS仓储管理"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amFlAllFunction"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/amFlLibrary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_main_btn"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/amTvLibrary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/icon_library"
+                    android:gravity="center"
+                    android:text="盘库"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/amBindCode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_main_btn">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/icon_bind_code"
+                    android:gravity="center"
+                    android:text="条码绑定"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

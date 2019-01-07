@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <TextView
+        android:id="@+id/item_garage_list_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height60"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_margin10"
+        android:textColor="@color/color_black373737_select_to_blue_6b93f6"
+        android:textSize="@dimen/text_size16"
+        tools:text="北京库"
+        />
+
+</layout>

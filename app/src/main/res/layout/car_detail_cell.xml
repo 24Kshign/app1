@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_size60"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bar_code"
+            style="@style/list_left_text"
+            android:text="条形码"/>
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/list_right_text"
+            tools:text="条形码"/>
+
+    </LinearLayout>
+</layout>

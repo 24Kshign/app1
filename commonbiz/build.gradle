@@ -1,0 +1,19 @@
+apply from: "$rootProject.projectDir/$configModuleName/subModuleHeader.gradle"
+
+dependencies {
+
+    compile rootProject.ext.dependencies.appcompat_v7
+    compile rootProject.ext.dependencies.support_v4
+
+    compile rootProject.ext.dependencies.retrofit
+    compile rootProject.ext.dependencies.rxAndroid
+    compile rootProject.ext.dependencies.rxJava
+    compile rootProject.ext.dependencies.gson
+    compile rootProject.ext.dependencies.okHttp
+    compile rootProject.ext.dependencies.recyclerview
+    compile rootProject.ext.dependencies.glide
+    compile rootProject.ext.dependencies.easyrecyclerview
+    compile project(':base')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+globleConfigure()

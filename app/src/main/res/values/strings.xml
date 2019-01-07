@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Volvo</string>
+    <string name="title_text_import_limit">（%1$s/%2$s）导入</string>
+    <string name="title_text_import">（%s）导入</string>
+    <string name="image_viewer_indicator">%1$d/%2$d</string>
+    <string name="albums_take_picture">拍摄照片</string>
+    <string name="sanner_helper">VIN码助手</string>
+    <string name="un_search_text">搜索身份证全号、车架号后四位、客户、业务员</string>
+    <string name="rfid_pic_hint">请拍摄条形码被正确黏贴在车辆前挡风玻璃的照片，照片中必须同时包含条形码和车架号</string>
+
+    <string name="avchat_notification">正在与%1$s通话中，点击继续</string>
+    <string name="avchat_call">网络通话</string>
+    <string name="avchat_no_pickup_call">未接听</string>
+
+    <string name="headquarters">总部</string>
+    <string name="direct_seeding">抽检直播</string>
+    <string name="incoming_call_notification">请全力配合抽检!</string>
+    <string name="custom_service">客服:</string>
+    <string name="vin_no">车架号:</string>
+    <string name="vehicle_attr">车辆属性:</string>
+    <string name="repository_info">库位信息:</string>
+    <string name="key_info">I C卡号:</string>
+    <string name="avchatting_empty">无</string>
+    <string name="video_request">1. 横向拍摄视频（把手机横过来拍）\n\n2. 车辆居中，保持合适距离\n\n3. 避免抖动、模糊，画面过暗\n\n4. 时间控制在20秒左右</string>
+    <string name="video_tip">1. 订单宝、质损车可以不拍\n\n2. 车型、配置、内外饰、卖家均相同的多辆车，最少只需拍摄一次，多拍就择优展示\n\n3. 验车结束后如需补拍视频，请至钉钉-仓储增值服务</string>
+
+    <string name="js_handler_set_title">setTitle</string>
+    <string name="js_handler_set_right">setRightBtn</string>
+    <string name="js_handler_set_right_listener">setRightListener</string>
+    <string name="js_handler_scan_code">scanCode</string>
+    <string name="js_handler_take_photo_and_gallery">takePhotoAndGallery</string>
+    <string name="js_handler_scan_photo">scanPhoto</string>
+    <string name="js_handler_close_webview">closeWebView</string>
+    <string name="gaode_key">91bdc7e85d4281816052279e5fd41bf9</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_padding10"
+        android:paddingRight="@dimen/common_padding10"
+        >
+
+        <TextView
+            android:id="@+id/attr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:paddingBottom="@dimen/small_padding5"
+            android:paddingTop="@dimen/small_padding5"
+            android:textColor="@color/gray_AFAFAF"
+            android:textSize="@dimen/text_size17"
+            tools:text="属性名称"
+            />
+
+        <TextView
+            android:id="@+id/attr_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/small_padding5"
+            android:paddingTop="@dimen/small_padding5"
+            android:textColor="@color/black_373737"
+            android:textSize="@dimen/text_size17"
+            tools:text="属性值属性值属性值属性值属性值属性值属性值属性值属性值属性值"
+            />
+    </LinearLayout>
+
+
+</layout>

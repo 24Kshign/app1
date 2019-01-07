@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size60"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/common_margin10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowColor="#7f000000"
+                android:textSize="20dp"
+                android:textColor="@color/black_373737"
+                android:text="客户名称"/>
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:shadowColor="#7f000000"
+                android:textSize="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/big1_margin20"
+                android:textColor="@color/black_373737"
+                android:hint="请输入客户名称"
+                android:background="@color/white"
+                android:textColorHint="@color/gray_AFAFAF"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"/>
+
+            <RelativeLayout
+                android:id="@+id/progress_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/main_circle"
+                    style="@style/mProgress_circle_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:indeterminateDuration="3600" />
+
+                <ProgressBar
+                    style="@style/mProgress_circle_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/main_circle"
+                    android:layout_alignLeft="@id/main_circle"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginLeft="25dp"
+                    android:indeterminateDuration="2100" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

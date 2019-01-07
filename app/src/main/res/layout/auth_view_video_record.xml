@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="150dp">
+
+    <FrameLayout
+        android:id="@+id/choose_pic_img_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150dp"
+        android:layout_centerHorizontal="true"
+        >
+
+        <ImageView
+            android:id="@+id/choose_pic_img_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="150dp"
+            android:background="@color/grey_F0F0F0"
+            android:scaleType="centerInside"
+            android:src="@drawable/vidoe_icon"
+            />
+
+        <ImageView
+            android:id="@+id/choose_pic_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:paddingLeft="7dp"
+            android:paddingBottom="7dp"
+            android:clickable="true"
+            android:src="@drawable/photo_ic_pic_delete"
+            android:visibility="gone"
+            />
+
+        <View
+            android:id="@+id/choose_pic_img_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#20000000"
+            android:visibility="invisible"
+            />
+
+        <ProgressBar
+            android:id="@+id/choose_pic_img_progress"
+            style="@style/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/choose_pic_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:text="图片仅用于\n卖好车审核"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="invisible"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>

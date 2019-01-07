@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_grey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_padding10"
+                    android:text="基本信息"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size18" />
+
+                <View
+                    style="@style/bottom_line"
+                    android:layout_marginLeft="-10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="订单编号"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/order_code"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="车架号" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="业务员"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/salesman"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/vin_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="联系方式"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/sales_phone"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin10"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="客户"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/client"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="车架号" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="联系人"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/client_man"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="联系方式"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/client_phone"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <View style="@style/bottom_line"
+                    android:layout_marginLeft="@dimen/common_margin10"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="物流公司"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/company"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="车架号" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="联系人"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/company_man"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="联系方式"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/company_phone"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="已入库"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/instoraged"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="车架号" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size40"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/list_left_text"
+                        android:layout_width="80dp"
+                        android:text="未入库"
+                        android:textSize="@dimen/text_size18" />
+
+                    <TextView
+                        android:id="@+id/uninstorage"
+                        style="@style/list_right_text"
+                        android:textSize="@dimen/text_size18"
+                        tools:text="宝马" />
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/uninstorage_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_padding10"
+                    android:text="未入库车辆信息"
+                    android:background="@color/white"
+                    android:textColor="@color/gray_AFAFAF"
+                    android:textSize="@dimen/text_size18" />
+
+                <View style="@style/bottom_line" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/instoraged_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin10"
+                    android:background="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/instorage_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_size60"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_padding10"
+                    android:text="完成入库车辆信息"
+                    android:background="@color/white"
+                    android:textColor="@color/gray_AFAFAF"
+                    android:textSize="@dimen/text_size18" />
+
+                <View style="@style/bottom_line" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/have_instorage_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin10"
+                    android:background="@color/white"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

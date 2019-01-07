@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/big_padding20"
+            android:gravity="center_horizontal"
+            android:text="确认出库"
+            android:textColor="@color/black_626262"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black_373737"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/big_padding20"
+            android:text="是否确认出库？"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/continue_ruku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/big1_margin20"
+                android:textColor="@color/blue_6B93F6"
+                android:text="确定"
+                />
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_toLeftOf="@id/continue_ruku"
+                android:layout_marginRight="@dimen/big1_margin20"
+                android:textColor="@color/blue_6B93F6"
+                android:text="取消"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

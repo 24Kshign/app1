@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/detail_list"
+            style="@style/RecyclerViewBaseStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/to_all_details"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height60"
+            android:gravity="center"
+            android:text="查看完整盘点信息"
+            android:textColor="@color/blue_6C94F7"
+            android:textSize="@dimen/text_size20"
+            />
+    </LinearLayout>
+
+</layout>

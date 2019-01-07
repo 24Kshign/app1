@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_key">
+        <item>1把</item>
+        <item>2把</item>
+        <item>3把</item>
+        <item>4把</item>
+        <item>5把</item>
+    </string-array>
+</resources>

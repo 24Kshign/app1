@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+    <TextView
+        android:id="@+id/key_num"
+        android:layout_width="match_parent"
+        android:minWidth="100dp"
+        android:layout_height="@dimen/cell_size40"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/color_black373737_select_to_blue_6b93f6"
+        android:textSize="@dimen/text_size16"
+        tools:text="1把"
+        />
+</layout>

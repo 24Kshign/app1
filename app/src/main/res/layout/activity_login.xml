@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/changeNet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="切换网络"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/volvo_logo" />
+
+        <TextView
+            android:id="@+id/version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="仓库管理助手v1.0"
+            android:textColor="@color/black_373737"
+            android:textSize="@dimen/text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/margin_big20"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/margin_big20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/al_tv_mhc_staff"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableBottom="@drawable/login_bottom_indicator"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="仓库监管员"
+                android:textColor="@color/selector_login_indicator"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/al_tv_not_mhc_staff"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableBottom="@drawable/login_bottom_indicator"
+                android:gravity="center"
+                android:text="非仓库监管员"
+                android:textColor="@color/selector_login_indicator"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big20"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="@dimen/margin_big20"
+            android:background="@color/white"
+            android:imeOptions="actionDone"
+            android:maxLength="11"
+            android:paddingTop="@dimen/common_margin"
+            android:paddingBottom="@dimen/common_margin"
+            android:textColor="@color/black_626262"
+            android:textColorHint="@color/gray_AFAFAF"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size16"
+            tools:text="15256669879" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:layout_marginLeft="@dimen/margin_big20"
+            android:layout_marginRight="@dimen/margin_big20"
+            android:background="@color/blue_6B93F6" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_big20"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="@dimen/margin_big20"
+            android:background="@color/white"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingTop="@dimen/common_margin"
+            android:paddingBottom="@dimen/common_margin"
+            android:textColor="@color/black_626262"
+            android:textColorHint="@color/gray_AFAFAF"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size16"
+            tools:text="nuenue" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:layout_marginLeft="@dimen/margin_big20"
+            android:layout_marginRight="@dimen/margin_big20"
+            android:background="@color/blue_6B93F6" />
+
+        <CheckBox
+            android:id="@+id/auto_login"
+            style="@style/mycheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="@dimen/small_padding5"
+            android:text="自动登录"
+            android:textColor="@color/black_626262"
+            android:textSize="@dimen/text_size16" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height45"
+            android:layout_marginLeft="@dimen/big1_margin20"
+            android:layout_marginTop="@dimen/big1_margin20"
+            android:layout_marginRight="@dimen/big1_margin20"
+            android:background="@drawable/button_selector"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size18" />
+
+    </LinearLayout>
+</layout>

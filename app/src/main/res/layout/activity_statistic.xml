@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/in_out"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:src="@drawable/icon_in_or_out" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:layout_toRightOf="@id/icon1"
+                    android:gravity="center_vertical"
+                    android:text="出入库统计"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size20" />
+
+                <com.maihaoche.volvo.view.MyAnimImageView
+                    android:id="@+id/arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </RelativeLayout>
+
+            <View style="@style/bottom_line" />
+
+            <include layout="@layout/in_out_statis"
+                android:id="@+id/in_out_content"/>
+
+            <View style="@style/bottom_line"
+                android:id="@+id/line1"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/storage"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:src="@drawable/icon_statis" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:layout_toRightOf="@id/icon2"
+                    android:gravity="center_vertical"
+                    android:text="库存统计"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size20" />
+
+                <com.maihaoche.volvo.view.MyAnimImageView
+                    android:id="@+id/arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_arrow_down"/>
+
+
+            </RelativeLayout>
+
+
+
+            <View style="@style/bottom_line" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/storage_chart"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:visibility="gone"/>
+
+            <View style="@style/bottom_line"
+                android:id="@+id/line2"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/older"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:src="@drawable/icon_older" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:layout_toRightOf="@id/icon3"
+                    android:gravity="center_vertical"
+                    android:text="库龄统计"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size20" />
+
+                <com.maihaoche.volvo.view.MyAnimImageView
+                    android:id="@+id/arrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </RelativeLayout>
+
+            <View style="@style/bottom_line"
+                android:id="@+id/line3"
+                android:visibility="gone"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/older_chart"
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:visibility="gone"/>
+
+            <View style="@style/bottom_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/exception"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/icon4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:src="@drawable/icon_excep" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/big1_margin20"
+                    android:layout_toRightOf="@id/icon4"
+                    android:gravity="center_vertical"
+                    android:text="异常统计"
+                    android:textColor="@color/black_373737"
+                    android:textSize="@dimen/text_size20" />
+
+                <com.maihaoche.volvo.view.MyAnimImageView
+                    android:id="@+id/arrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </RelativeLayout>
+
+            <View style="@style/bottom_line" />
+
+            <include layout="@layout/exception_statics"
+                android:id="@+id/exception_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

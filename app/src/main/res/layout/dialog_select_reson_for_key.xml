@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取用原因"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/black_373737"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radio_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/outstorageCheckbox"
+                android:text="临时看车"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="-45dp"
+                android:checked="true"
+                android:textColor="@color/grey_626262"/>
+            <RadioButton
+                android:id="@+id/radio_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/outstorageCheckbox"
+                android:text="出库"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="-65dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/grey_626262"
+                android:visibility="gone"/>
+            <RadioButton
+                android:id="@+id/radio_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/outstorageCheckbox"
+                android:text="移位"
+                android:textSize="20dp"
+                android:paddingLeft="20dp"
+                android:drawablePadding="20dp"
+                android:layout_marginLeft="-65dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/grey_626262"/>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/big1_margin20"
+                android:textColor="@color/blue_6B93F6"
+                android:text="确认"
+                />
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_toLeftOf="@id/sure"
+                android:layout_marginRight="@dimen/big1_margin20"
+                android:textColor="@color/blue_6B93F6"
+                android:text="取消"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height45"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/shape_text_left_blue"
+            android:drawablePadding="8dp"
+            android:text="车辆信息"
+            android:textColor="@color/black_373737"
+            android:textSize="@dimen/text_size18" />
+
+        <View
+            style="@style/bottom_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_padding5"
+            android:paddingTop="@dimen/small_padding5"
+            android:paddingBottom="@dimen/small_padding5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="车架号"
+                android:textSize="@dimen/text_size16" />
+
+            <TextView
+                android:id="@+id/car_unique"
+                style="@style/list_right_text"
+                android:textSize="@dimen/text_size16"
+                android:text=""
+                tools:text="车架号" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/small_padding5"
+            android:paddingBottom="@dimen/small_padding5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_gravity="top"
+                android:layout_width="80dp"
+                android:text="车辆属性"
+                android:textSize="@dimen/text_size16" />
+
+            <TextView
+                android:id="@+id/car_attribute"
+                style="@style/list_right_text"
+                android:textSize="@dimen/text_size16"
+                tools:text="宝马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/small_padding5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/vin_area"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/small_padding5"
+                android:paddingBottom="@dimen/small_padding5"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="80dp"
+                    android:text="条形码"
+                    android:textSize="@dimen/text_size16" />
+
+                <TextView
+                    android:id="@+id/vin_code"
+                    style="@style/list_right_text"
+                    android:textSize="@dimen/text_size16"
+                    tools:text="宝马" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remark_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/small_padding5"
+                android:paddingBottom="@dimen/small_padding5"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="80dp"
+                    android:layout_gravity="top"
+                    android:text="备注"
+                    android:textSize="@dimen/text_size16" />
+
+                <TextView
+                    android:id="@+id/remark"
+                    style="@style/list_right_text"
+                    android:textSize="@dimen/text_size16"
+                    tools:text="A仓库费用：100元\nB仓库费用：100元" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/time_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/small_padding5"
+                android:paddingBottom="@dimen/small_padding5"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="80dp"
+                    android:text="入库时间"
+                    android:textSize="@dimen/text_size16" />
+
+                <TextView
+                    android:id="@+id/time"
+                    style="@style/list_right_text"
+                    android:textSize="@dimen/text_size16"
+                    tools:text="宝马" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </layout>

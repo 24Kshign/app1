@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/totle_count"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:background="@color/bg_grey"
+          android:gravity="center"
+          android:textColor="@color/gray_AFAFAF"
+          android:textSize="@dimen/text_size17"
+          tools:text="共9辆车"/>

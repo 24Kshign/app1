@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey"
+        android:orientation="vertical">
+
+        <View
+            style="@style/bottom_line"
+            android:layout_marginLeft="@dimen/common_margin10"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/common_margin10"
+            android:paddingTop="@dimen/big_margin15"
+            android:text="常规照片"
+            android:textColor="@color/gray_AFAFAF"
+            android:textSize="@dimen/text_size16"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/photo_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/big_margin15"
+            android:paddingLeft="@dimen/big_padding20"
+            android:paddingRight="@dimen/big_padding20"
+            android:paddingTop="@dimen/big_margin15"
+            />
+
+        <View style="@style/bottom_line"/>
+
+
+        <LinearLayout
+            android:id="@+id/remark_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:layout_marginTop="@dimen/big1_margin20"
+                android:text="车况说明"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size16"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="202dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:minHeight="160dp"
+                    android:padding="@dimen/common_padding10"
+                    android:textColor="@color/black_373737"
+                    android:textColorHint="@color/gray_AFAFAF"
+                    android:textSize="@dimen/text_size16"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/error_pic_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/error_pic"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size40"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_margin10"
+                android:text="异常照片"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size16"/>
+
+
+            <View style="@style/bottom_line"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_error_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:paddingBottom="14dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:paddingTop="20dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

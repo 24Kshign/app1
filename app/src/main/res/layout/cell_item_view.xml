@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/cell_size60"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/key"
+            style="@style/list_left_text"
+            android:layout_width="wrap_content"
+            tools:text="里程" />
+
+        <EditText
+            android:id="@+id/content"
+            android:layout_toRightOf="@id/key"
+            style="@style/list_right_text"
+            android:background="@color/white"
+            tools:text="12.3公里" />
+
+        <ImageView
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/right_icon"
+            android:src="@drawable/clear_icon"/>
+
+    </RelativeLayout>
+</layout>

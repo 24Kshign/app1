@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--如何入库车辆-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_q"/>
+
+                <TextView
+                    style="@style/help_q_text"
+                    android:text="如何入库车辆？"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_a"/>
+
+                <TextView
+                    style="@style/help_a_text"
+                    android:text="登录仓管助手"/>
+
+                <TextView
+                    style="@style/help_a_next_text"
+                    android:text="点击入库"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:src="@drawable/ruku_bc"/>
+
+            <TextView
+                android:id="@+id/ruku_des_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:textColor="@color/black_373737"
+                android:textSize="18dp"
+                tools:text="详细操作请扫描二维码查看视频或点击:直接查看"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#e7e7e7"/>
+
+            <!--如何盘库-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_q"/>
+
+                <TextView
+                    style="@style/help_q_text"
+                    android:text="如何盘库？"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_a"/>
+
+                <TextView
+                    style="@style/help_a_text"
+                    android:text="登录仓管助手"/>
+
+                <TextView
+                    style="@style/help_a_next_text"
+                    android:text="点击盘库"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="点击开始盘库"/>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="携设备走到需盘车辆附近"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:src="@drawable/panku_bc"/>
+
+            <TextView
+                android:id="@+id/panku_des_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:textColor="@color/black_373737"
+                android:textSize="18dp"
+                tools:text="详细操作请扫描二维码查看视频或点击：http://bit.ly/2tg6Q91"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#e7e7e7"/>
+
+
+            <!--如何快速找车-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_q"/>
+
+                <TextView
+                    style="@style/help_q_text"
+                    android:text="如何快速找车？"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_a"/>
+
+                <TextView
+                    style="@style/help_a_text"
+                    android:text="点击车辆"/>
+
+                <TextView
+                    style="@style/help_a_next_text"
+                    android:text="点击快速找车"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:src="@drawable/zhaoche_bc"/>
+
+
+            <TextView
+                android:id="@+id/zhaoche_des_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:textColor="@color/black_373737"
+                android:textSize="18dp"
+                tools:text="详细操作请扫描二维码查看视频或点击：http://bit.ly/2tg6Q91"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#e7e7e7"/>
+
+
+            <!--夜间识别车架号小技巧-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_q"/>
+
+                <TextView
+                    style="@style/help_q_text"
+                    android:text="如何在夜间识别车架号？"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_a"/>
+
+                <TextView
+                    style="@style/help_a_text"
+                    android:text="进入入库页面"/>
+
+                <TextView
+                    style="@style/help_a_next_text"
+                    android:text="点击拍照"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:src="@drawable/xiaojiqiao_bc"/>
+
+
+            <TextView
+                android:id="@+id/xiaojiqiao_des_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="27dp"
+                android:paddingRight="27dp"
+                android:textColor="@color/black_373737"
+                android:textSize="18dp"
+                tools:text="详细操作请扫描二维码查看视频或点击：http://bit.ly/2tg6Q91"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#e7e7e7"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="20dp"
+                android:background="#e7e7e7"/>
+
+            <!--如何设置验车信息默认值？-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_q"/>
+
+                <TextView
+                    style="@style/help_q_text"
+                    android:text="如何设置验车信息默认值？"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/help_a"/>
+
+                <TextView
+                    style="@style/help_a_text"
+                    android:lineSpacingExtra="10dp"
+                    android:text="点击设置"/>
+
+                <TextView
+                    style="@style/help_a_next_text"
+                    android:text="自定义操作"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="打开默认填写开关"/>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="设置填写默认值"/>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="设置填写默认值"/>
+
+            <TextView
+                style="@style/help_a_next_text"
+                android:layout_marginLeft="50dp"
+                android:padding="5dp"
+                android:text="点击右上角保存"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"
+                android:src="@drawable/help_custom_action"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

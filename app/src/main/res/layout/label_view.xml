@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <RelativeLayout
+            android:id="@+id/label_view"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/label_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/shape_text_left_blue"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                tools:text="车辆信息"
+                android:textColor="@color/black_373737"
+                android:textSize="@dimen/text_size18"/>
+
+            <ImageView
+                android:id="@+id/label_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/common_margin10"
+                android:src="@drawable/ic_arrow_up"
+                />
+        </RelativeLayout>
+
+        <include
+            layout="@layout/include_line_horizontal"
+            />
+
+        <!--内容view -->
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            ></LinearLayout>
+
+    </LinearLayout>
+</layout>

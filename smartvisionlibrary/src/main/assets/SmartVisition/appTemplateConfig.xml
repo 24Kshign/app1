@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info>
+    <Platform Android="yes" IOS="no" />
+    <!--慧视OCR产品-->
+    <Product Type="17">
+        <!--VIN码-->
+        <SmartVisition Type="0003" name="VIN码" isselected="true">
+            <ScanningFrame Type="0" color="100_121_222_205" height="0.22" leftPointX="0.1" leftPointY="0.4"
+                           width="0.8" name="VIN码" nameTextSize="40" nameTextColor="100_121_222_205" namePositionX="0.48" namePositionY="0.35" ocrId="SV_ID_VIN_CARWINDOW"></ScanningFrame>
+        </SmartVisition>
+
+    </Product>
+</Info>

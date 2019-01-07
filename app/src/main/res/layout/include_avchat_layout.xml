@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="98dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="1dp"
+        android:src="@drawable/avchat_chatting"/>
+
+    <ImageView
+        android:id="@+id/avchat_iv_switch_camera"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/avchat_switch_camera_bg"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/custom_service"/>
+
+        <TextView
+            android:id="@+id/avchat_tv_custom_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/avchatting_empty"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/avchat_ll_attrs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/avchat_chatting_open">
+
+            <View
+                android:id="@+id/avchat_bt_open_control"
+                android:layout_width="46dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/avchat_chatting_attrs"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#EEEEEE"
+                    android:text="@string/vin_no"/>
+
+                <TextView
+                    android:id="@+id/avchat_tv_vin_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="4dp"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="@string/avchatting_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#EEEEEE"
+                    android:text="@string/vehicle_attr"/>
+
+                <TextView
+                    android:id="@+id/avchat_tv_vehicle_attr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="4dp"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="@string/avchatting_empty"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#EEEEEE"
+                    android:text="@string/repository_info"/>
+
+                <TextView
+                    android:id="@+id/avchat_tv_repository_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="4dp"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="@string/avchatting_empty"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#EEEEEE"
+                    android:text="@string/key_info"/>
+
+                <TextView
+                    android:id="@+id/avchat_tv_key_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="4dp"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="@string/avchatting_empty"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/avchat_bt_close_control"
+        android:layout_width="47dp"
+        android:layout_height="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:background="@drawable/avchat_chatting_close"/>
+</RelativeLayout>

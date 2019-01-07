@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/big_margin15"
+        android:paddingBottom="@dimen/big_margin15"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/common_padding10"
+        android:paddingRight="@dimen/common_padding10"
+        >
+        <include
+            layout="@layout/item_car_attr"
+            android:id="@+id/stocktake_time"
+            />
+        <include
+            layout="@layout/item_car_attr"
+            android:id="@+id/operator_name"
+            />
+        <include
+            layout="@layout/item_car_attr"
+            android:id="@+id/stocktake_type"
+            />
+
+        <LinearLayout
+            android:id="@+id/img_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/common_padding10"
+            >
+            <ImageView
+                android:id="@+id/img_car"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_arrow_up"
+                />
+            <View
+                android:layout_width="@dimen/common_margin10"
+                android:layout_height="1dp"
+                />
+            <ImageView
+                android:id="@+id/img_nameplate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_arrow_up"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

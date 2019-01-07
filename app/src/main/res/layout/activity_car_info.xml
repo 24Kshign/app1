@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!--内部有recyclerview,所以用nested-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/bg_grey"
+            android:paddingBottom="@dimen/margin_big20"
+            >
+
+            <!-- 车辆信息-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/car_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleName="车辆属性"
+                app:showToggle="false"
+                app:contentLayout="@layout/include_recyclerview"
+                ></com.maihaoche.volvo.view.LabelView>
+
+            <!--基本信息-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/base_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="基本信息"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_car_base_info"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+            <!--入库信息-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/entry_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="入库信息"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_car_instore"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+            <!--在库盘点-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/stocktake_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="在库盘点"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_stocktake_detail_list"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+            <!--在库异常-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/in_warehouse_exception"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="在库异常"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_recyclerview"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+
+            <!--出库信息-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/car_out_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="出库信息"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_out_info"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+
+            <!--其他情况-->
+            <com.maihaoche.volvo.view.LabelView
+                android:id="@+id/other_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin10"
+                app:titleName="其他情况"
+                app:showToggle="true"
+                app:showContentOnInit="false"
+                app:contentLayout="@layout/include_recyclerview"
+                android:visibility="gone"
+                ></com.maihaoche.volvo.view.LabelView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="value" type="com.maihaoche.volvo.ui.setting.DefauleValue"/>
+        <variable
+            name="event"
+            type="com.maihaoche.volvo.ui.instorage.activity.AddStorageInfoActivity"/>
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:text="车架号" />
+
+                <TextView
+                    android:id="@+id/frame_code"
+                    android:layout_alignParentRight="true"
+                    style="@style/list_right_text"
+                    android:textColor="@color/gray_AFAFAF"
+                    android:layout_marginRight="@dimen/common_margin10"
+                    tools:text="12.3公里" />
+            </RelativeLayout>
+            <View
+                style="@style/bottom_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/cell_size60"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:text="车辆属性" />
+
+                <TextView
+                    android:id="@+id/car_attribute"
+                    android:layout_alignParentRight="true"
+                    style="@style/list_right_text"
+                    android:layout_marginLeft="100dp"
+                    android:textColor="@color/gray_AFAFAF"
+                    android:layout_marginRight="@dimen/common_margin10"
+                    tools:text="国产" />
+            </RelativeLayout>
+            <View
+                style="@style/bottom_line"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size40"
+                android:textColor="@color/gray_AFAFAF"
+                android:text="上传入库资料（必填）"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:paddingLeft="@dimen/common_margin10"/>
+
+            <View
+                style="@style/bottom_line"/>
+
+            <RelativeLayout
+                android:id="@+id/date_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:textColor="@color/black_373737"
+                    android:layout_width="wrap_content"
+                    android:text="生产日期" />
+
+                <ImageView
+                    android:id="@+id/date_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_margin10"/>
+date
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_toLeftOf="@id/date_arrow"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black_373737"/>
+
+            </RelativeLayout>
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/text1"
+                    style="@style/list_left_text"
+                    android:width="120dp"
+                    android:textColor="@color/black_373737"
+                    android:layout_width="wrap_content"
+                    android:text="里程" />
+
+                <EditText
+                    android:id="@+id/mileage"
+                    style="@style/list_right_text"
+                    android:textColor="@color/black_373737"
+                    android:background="@color/white"
+                    android:layout_toRightOf="@id/text1"
+                    android:hint="请输入到库里程"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:focusable="true"
+                    android:gravity="right|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/gray_AFAFAF"
+                    android:layout_marginRight="60dp" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_margin10"
+                    android:textColor="@color/black_373737"
+                    android:text="里程" />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/clear"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/clear_icon"-->
+                    <!--android:layout_marginRight="5dp"-->
+                    <!--android:layout_toLeftOf="@id/text4"/>-->
+
+            </RelativeLayout>
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10"/>
+
+            <RelativeLayout
+                android:id="@+id/key_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:textColor="@color/black_373737"
+                    android:layout_width="wrap_content"
+                    android:text="钥匙" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_margin10"/>
+
+                <TextView
+                    android:id="@+id/key"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_toLeftOf="@id/arrow"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/black_373737"/>
+
+            </RelativeLayout>
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/text3"
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="关单/合格证"
+                    android:textColor="@color/black_373737" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/certification_have"
+                        style="@style/radio_button"
+                        android:checked="@{value.certification == 2 ?true:false}"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/certification_no"
+                        style="@style/radio_button"
+                        android:checked="@{value.certification == 1 ?true:false}"
+                        android:text="无" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/text5"
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="一致性证书"
+                    android:textColor="@color/black_373737" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/fit_certifi_have"
+                        style="@style/radio_button"
+                        android:checked="@{value.fitertifi == 2 ?true:false}"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/fit_certifi_no"
+                        style="@style/radio_button"
+                        android:checked="@{value.fitertifi == 1 ?true:false}"
+                        android:text="无" />
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="商检单"
+                    android:textColor="@color/black_373737" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/com_inspect_have"
+                        style="@style/radio_button"
+                        android:checked="@{value.comnspect == 2 ?true:false}"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/com_inspect_no"
+                        style="@style/radio_button"
+                        android:checked="@{value.comnspect == 1 ?true:false}"
+                        android:text="无" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/list_left_text"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="说明书"
+                    android:textColor="@color/black_373737" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/direction_have"
+                        style="@style/radio_button"
+                        android:checked="@{value.direction == 2 ?true:false}"
+                        android:text="有" />
+
+                    <RadioButton
+                        android:id="@+id/direction_no"
+                        style="@style/radio_button"
+                        android:checked="@{value.direction == 1 ?true:false}"
+                        android:text="无" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/bottom_line"
+                android:layout_marginLeft="@dimen/common_margin10"/>
+
+
+            <include layout="@layout/add_storeage_photo"
+                android:id="@+id/picture"
+                app:event="@{event}"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

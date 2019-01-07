@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height">
+
+            <TextView
+                android:id="@+id/image_viewer_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/image_viewer_indicator"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/image_viewer_back"
+                android:layout_width="@dimen/toolbar_height"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_close" />
+        </FrameLayout>
+
+
+        <com.maihaoche.volvo.view.ImageViewPager
+            android:id="@+id/image_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/toolbar_height" />
+
+        <TextView
+            android:id="@+id/image_viewer_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:text="备注：右侧车门有划行，车胎爆了，不能开，哈不行啊的客户参加萨瓦迪卡哈" />
+
+    </FrameLayout>
+</layout>

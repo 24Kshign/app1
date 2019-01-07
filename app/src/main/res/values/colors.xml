@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--背景-->
+    <color name="blue_7F6C94F7">#7F6C94F7</color>
+    <!--文字颜色-->
+    <color name="black_373737">#373737</color>
+    <color name="black_2D3133">#2D3133</color>
+
+    <!--提示文字颜色-->
+    <color name="gray_AFAFAF">#AFAFAF</color>
+    <color name="gray_CFCFCF">#CFCFCF</color>
+
+
+    <color name="red_FD7A71">#FD7A71</color>
+
+    <color name="orange_FF9933">#FF9933</color>
+    <color name="search_bk">#EDEDED</color>
+    <color name="green_4BD1AF">#4BD1AF</color>
+    <color name="no_color">#00FFFFFF</color>
+    <color name="transparent">#80000000</color>
+    <color name="bg_check_grey">#F8F8F8</color>
+    <color name="grey_F3F4F5">#F3F4F5</color>
+    <color name="grey_626262">#626262</color>
+    <color name="text_black">#8A000000</color>
+    <color name="grey_ACB5B9">#ACB5B9</color>
+    <color name="blue_6C94F7">#6C94F7</color>
+    <color name="blue_00BCD4">#00bcd4</color>
+    <color name="grey_FCFCFC">#FCFCFC</color>
+    <color name="orange_88FF8903">#88FF8903</color>
+    <color name="color_outside_bg">#7F6C94F7</color>
+    <color name="color_laser">#7F6C94F7</color>
+    <color name="translucent_white">#61FFFFFF</color>
+    <color name="transparent2">#00000000</color>
+    <color name="grey_F0F0F0">#F0F0F0</color>
+    <color name="grey_E7E7E7">#E7E7E7</color>
+</resources>

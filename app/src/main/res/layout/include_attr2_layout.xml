@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+             >
+    <LinearLayout
+        android:id="@+id/attr_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/small_padding5"
+        android:paddingBottom="@dimen/small_padding5"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/attr_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="80dp"
+            android:textSize="@dimen/text_size17"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:textColor="@color/gray_AFAFAF"
+            tools:text="车架号"
+            />
+        <TextView
+            android:id="@+id/attr_value_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size17"
+            android:textColor="@color/gray_AFAFAF"
+            android:layout_marginLeft="@dimen/common_margin10"
+            android:layout_marginRight="@dimen/common_margin10"
+            tools:text="JTEBU3FJ8GK110478"
+            />
+
+        <LinearLayout
+            android:id="@+id/status_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/blue_dot_shap"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/status_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:textSize="@dimen/text_size17"
+                android:textColor="@color/blue_6C94F7"
+                tools:text="nihao "/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minWidth="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_626262"
+            android:text="正在寻找车辆..."
+            android:gravity="center"
+            android:textSize="@dimen/text_size20"
+            android:layout_marginTop="20dp"/>
+        <LinearLayout
+            android:id="@+id/text_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="车架号    "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/gray_AFAFAF"/>
+
+                <TextView
+                    android:id="@+id/frame_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black_373737"
+                    tools:text="fsdfhsdkfsdfsdkfhsdkjfhsdjk"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="车辆属性"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/gray_AFAFAF"/>
+
+                <TextView
+                    android:id="@+id/car_attribute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/black_373737"
+                    tools:text="fsdfhsdkfsdfsdkfhsdkjfhsdjk"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:text="仓库位置"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/gray_AFAFAF"/>
+
+                <TextView
+                    android:id="@+id/lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/black_373737"
+                    tools:text="fsdfhsdkfsdfsdkfhsdkjfhsdjk"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wf_animation"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size16"
+            android:textColor="@color/gray_AFAFAF"
+            android:layout_marginTop="-60dp"
+            android:layout_gravity="center_horizontal"
+            android:text="当目标车辆在附近时，\nPDA将震动提示"
+            />
+        <TextView
+            android:id="@+id/sure"
+            android:text="确定"
+            android:textColor="@color/blue_6C94F7"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

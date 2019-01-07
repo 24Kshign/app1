@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/common_margin10"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_373737"
+                android:textSize="@dimen/text_size17"
+                tools:text="2017-12-12 12:00"
+                />
+
+            <ImageView
+                android:id="@+id/item_record_right_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_arrow"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin10"
+            >
+
+            <TextView
+                android:id="@+id/item_record_num_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已盘点/需盘点:"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size17"
+                />
+
+            <TextView
+                android:id="@+id/item_record_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_small6"
+                android:layout_toRightOf="@id/item_record_num_remark"
+                android:textSize="@dimen/text_size17"
+                tools:text="100/100"
+                />
+
+            <TextView
+                android:id="@+id/item_record_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/text_size17"
+                tools:text="正常"
+                tools:textColor="@color/green_4BD1AF"
+                />
+
+            <ImageView
+                android:id="@+id/item_record_result_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_small6"
+                android:layout_toLeftOf="@id/item_record_result"
+                tools:src="@drawable/vector_tick"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</layout>

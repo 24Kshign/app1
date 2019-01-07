@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/number"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size17"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="NO.1"/>
+
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/bottom_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="车架号"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/frame_code"
+                style="@style/list_right_text"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="车辆属性"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/car_attribute"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="宝马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="车辆库龄"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/car_old"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/out_storage_no_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="出库单号"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/out_storage_no"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="宝马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="钥匙"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/key"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+
+            <LinearLayout
+                android:id="@+id/status_area"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:src="@drawable/blue_dot_shap"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/status_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="@dimen/text_size17"
+                    android:textColor="@color/blue_6C94F7"
+                    tools:text="nihao "/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="当前库位"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tms_person_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="90dp"
+                android:text="物流提车人"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/tms_person"
+                android:text="查看详情"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue_6C94F7"
+                android:textSize="@dimen/text_size18"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paper_capacitor_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="150dp"
+                android:text="纸质函指定提车人"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/paper_capacitor"
+                android:text="查看详情"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue_6C94F7"
+                android:textSize="@dimen/text_size18"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/pickletter_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="150dp"
+                android:text="电子提车委托函"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/image"
+                android:text="查看详情"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/blue_6C94F7"
+                android:textSize="@dimen/text_size18"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            style="@style/bottom_line"/>
+
+
+        <View
+            style="@style/bottom_line"/>
+
+        <RelativeLayout
+            android:id="@+id/button_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/out"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/button_blue_shape"
+                android:text="出库"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/blue_6C94F7"
+                android:textSize="@dimen/text_size17"/>
+
+            <TextView
+                android:id="@+id/apply_key"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin10"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/button_blue_shape"
+                android:text="取钥匙"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/out"
+                android:textColor="@color/blue_6C94F7"
+                android:textSize="@dimen/text_size17"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+</layout>

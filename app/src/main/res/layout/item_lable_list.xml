@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height60"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/item_lable_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_margin10"
+            android:layout_marginRight="100dp"
+            android:textColor="@color/color_black373737_select_to_blue_6b93f6"
+            android:textSize="@dimen/text_size16"
+            tools:text="北京库" />
+
+        <TextView
+            android:id="@+id/edit"
+            android:text="编辑"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/blue_6C94F7"
+            android:textSize="@dimen/text_size16"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/delete"
+            android:text="删除"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/edit"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/black_373737"
+            android:textSize="@dimen/text_size16"
+            android:layout_marginRight="10dp"/>
+
+        <View
+            style="@style/bottom_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</layout>

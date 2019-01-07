@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/container_rl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surfaceview_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--shadow-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7f000000"/>
+
+    <ImageView
+        android:id="@+id/back_iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="center"
+        android:src="@drawable/back_btn"/>
+
+    <ImageView
+        android:id="@+id/flash_iv"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/flash_on"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="请扫描VIN码"
+        android:textColor="#79decd"
+        android:textSize="18dp"/>
+
+    <ImageButton
+        android:id="@+id/imbtn_takepic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/paizhao"/>
+
+    <!--VIN码识别敏感框-->
+    <com.kernal.smartvision.view.FinderView
+        android:id="@+id/focus_layout_fv"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/focus_view_bg"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

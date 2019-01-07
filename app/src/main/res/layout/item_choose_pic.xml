@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical"
+        >
+
+        <com.maihaoche.volvo.view.SquareRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.maihaoche.volvo.view.ChoosePicImage
+                android:id="@+id/choose_pic_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/choose_pic_item_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:paddingBottom="7dp"
+                android:paddingLeft="7dp"
+                android:src="@drawable/icon_delete_pic"
+                android:visibility="visible"/>
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/choose_pic_item"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FCFCFC"
+                android:background="#30373737"
+                android:textSize="@dimen/text_size16"
+                android:visibility="gone"
+                />
+        </com.maihaoche.volvo.view.SquareRelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:id="@+id/btn_remark"
+            android:text="去备注"
+            android:visibility="gone"
+            android:paddingTop="@dimen/common_padding10"
+            android:paddingBottom="@dimen/common_padding10"
+            android:background="@drawable/button_blue_shape"
+            android:textColor="@color/blue_6B93F6"
+            android:textSize="@dimen/text_size16"/>
+    </LinearLayout>
+</layout>

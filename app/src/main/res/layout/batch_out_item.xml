@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40">
+
+            <CheckBox
+                android:id="@+id/check_button"
+                style="@style/outstorageCheckbox"
+                android:layout_width="40dp"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/number"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size17"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/check_button"
+                tools:text="NO.1"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size17"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_centerHorizontal="true"
+                tools:text="车压贷"/>
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/right_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/bottom_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="车架号"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/frame_code"
+                style="@style/list_right_text"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/cell_size40"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="车辆属性"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/car_attribute"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="宝马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="车辆库龄"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/car_old"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="里程"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/mail"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="宝马" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="钥匙"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/key"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size40"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/list_left_text"
+                android:layout_width="80dp"
+                android:text="仓库位置"
+                android:textSize="@dimen/text_size18" />
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/list_right_text"
+                android:textColor="@color/gray_AFAFAF"
+                android:textSize="@dimen/text_size18"
+                tools:text="车架号" />
+        </LinearLayout>
+
+        <View
+            style="@style/bottom_line"/>
+
+
+
+    </LinearLayout>
+</layout>

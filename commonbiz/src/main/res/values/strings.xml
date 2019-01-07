@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CommonBiz</string>
+    <string name="common_net_error_click">网络错误</string>
+    <string name="common_server_error">服务异常</string>
+</resources>

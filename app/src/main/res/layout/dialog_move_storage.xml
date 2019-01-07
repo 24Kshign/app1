@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="200dp"
+        android:minWidth="300dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:textColor="@color/gray_AFAFAF"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/big_margin15"
+            android:text="库位选择"/>
+
+
+        <TextView
+            android:id="@+id/current_storage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/gray_AFAFAF"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="@dimen/big_margin15"
+            android:text="当前库位:"/>
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/blue_6C94F7"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/big_margin15"
+            android:text="切换平面图"
+            android:padding="5dp"
+            android:layout_gravity="right"
+            android:visibility="gone"
+            android:background="@drawable/button_blue_shape"/>
+
+        <View
+            style="@style/bottom_line"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <com.maihaoche.volvo.view.WheelRecyclerView
+                        android:id="@+id/list1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        app:dividerColor="#adb0a7"
+                        android:layout_height="wrap_content"
+                        app:selectTextColor="@color/black_373737"
+                        app:unselectTextColor="#bbbbbb"
+                        app:selectTextSize="@dimen/text_size17"
+                        app:unselectTextSize="@dimen/text_size17"
+                        app:selectSuffix="区"/>
+
+                    <com.maihaoche.volvo.view.WheelRecyclerView
+                        android:id="@+id/list2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        app:dividerColor="#adb0a7"
+                        android:layout_height="wrap_content"
+                        app:selectTextColor="@color/black_373737"
+                        app:unselectTextColor="#bbbbbb"
+                        app:selectTextSize="@dimen/text_size17"
+                        app:unselectTextSize="@dimen/text_size17"
+                        app:selectSuffix="排"/>
+
+                    <com.maihaoche.volvo.view.WheelRecyclerView
+                        android:id="@+id/list3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        app:dividerColor="#adb0a7"
+                        android:layout_height="wrap_content"
+                        app:selectTextColor="@color/black_373737"
+                        app:unselectTextColor="#bbbbbb"
+                        app:selectTextSize="@dimen/text_size17"
+                        app:unselectTextSize="@dimen/text_size17"
+                        app:selectSuffix="号"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/bottom_line"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/select_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@color/gray_AFAFAF"
+                    android:layout_marginLeft="13dp"
+                    android:text="已选库位:"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:text="当前仓库无可用库位，请在有空库位时再选择停放库位"
+                android:gravity="center"
+                android:textSize="17dp"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/gray_AFAFAF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:id="@+id/progress">
+
+                <include layout="@layout/view_progress"/>
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#6c94f7"
+                android:text="取消"
+                />
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="50dp"
+                android:textColor="#6c94f7"
+                android:text="确定"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</layout>

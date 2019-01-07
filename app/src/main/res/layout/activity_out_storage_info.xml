@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#cddcff"
+                    android:textSize="@dimen/text_size12"
+                    android:textColor="@color/blue_6C94F7"
+                    android:gravity="center"
+                    android:text="已结清仓储费用，上传资料后可出库"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/pic_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin10"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/cell_size40"
+                        android:layout_marginLeft="@dimen/common_margin10"
+                        android:gravity="center_vertical"
+                        android:text="出库资料"
+                        android:textColor="@color/grey_ACB5B9"
+                        android:textSize="@dimen/text_size16" />
+
+                    <View style="@style/bottom_line" />
+
+                    <LinearLayout
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:orientation="vertical">
+
+
+                        <com.maihaoche.volvo.view.SquareRelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="26dp">
+
+                            <com.maihaoche.volvo.view.ChoosePicImage
+                                android:id="@+id/choose_pic_item1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/default_image1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:scaleType="centerInside"
+                                tools:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/choose_pic_item_delete1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:clickable="true"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="7dp"
+                                android:src="@drawable/icon_delete_pic"
+                                android:visibility="gone" />
+                        </com.maihaoche.volvo.view.SquareRelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="上传提车委托函"
+
+                            android:textColor="@color/black_626262"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/bottom_line"
+                        android:layout_marginTop="26dp" />
+
+                    <LinearLayout
+                        android:layout_width="148dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="13dp"
+                        android:orientation="vertical">
+
+
+                        <com.maihaoche.volvo.view.SquareRelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="26dp">
+
+                            <com.maihaoche.volvo.view.ChoosePicImage
+                                android:id="@+id/choose_pic_item2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <ImageView
+                                android:id="@+id/default_image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                tools:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/choose_pic_item_delete2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:clickable="true"
+                                android:paddingBottom="7dp"
+                                android:paddingLeft="7dp"
+                                android:src="@drawable/icon_delete_pic"
+                                android:visibility="gone" />
+                        </com.maihaoche.volvo.view.SquareRelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="上传交车照片"
+
+                            android:textColor="@color/black_626262"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/bottom_line"
+                        android:layout_marginTop="26dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/save"
+                    android:text="确认出库"
+                    android:layout_marginBottom="20dp"
+                    style="@style/sure_button"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/close_account"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/totle_cost"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:textSize="@dimen/text_size13"
+                android:textColor="@color/black"
+                tools:text="仓储费合计：¥ 800.00"/>
+
+            <TextView
+                android:id="@+id/close_btn"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:text="结算"
+                android:textColor="@color/white"
+                android:background="@color/blue_6C94F7"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/fl_photo_title"
+            layout="@layout/include_photo_title_bar"
+            />
+
+        <GridView
+            android:id="@+id/photo_wall_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/photo_txt_preview"
+            android:layout_marginTop="48dp"
+            android:background="#E9E9E9"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:numColumns="3"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp"/>
+
+        <TextView
+            android:id="@+id/photo_txt_preview"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FAFAFA"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="预览"
+            android:textSize="15dp"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <include
+            android:id="@+id/photo_wall_pop"
+            layout="@layout/include_photo_wall_album"
+            />
+
+        <include
+            android:id="@+id/photo_wall_pop_choose"
+            layout="@layout/include_photo_wall_camera_choose"
+            />
+
+        <include
+            android:id="@+id/progress_view"
+            layout="@layout/abs_progress"
+            />
+
+    </RelativeLayout>
+</layout>

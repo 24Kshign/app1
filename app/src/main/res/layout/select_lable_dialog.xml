@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="取消"
+                android:textColor="@color/black_626262"
+                android:textSize="@dimen/text_size16"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="选择仓库位置"
+                android:textColor="@color/grey_ACB5B9"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/sure"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:text="完成"
+                android:textColor="@color/blue_6B93F6"
+                android:textSize="@dimen/text_size16"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/bottom_line"/>
+
+        <com.maihaoche.volvo.view.WheelRecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:selectTextColor="@color/black_373737"
+            app:unselectTextColor="@color/grey_626262"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/grey_626262"
+            android:textSize="20dp"/>
+    </LinearLayout>
+</layout>

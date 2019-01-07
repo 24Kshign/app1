@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--底部横线，提示文字-->
+    <color name="blue_6B93F6">#6B93F6</color>
+    <!--登陆按钮背景（不可点击）-->
+    <color name="blue_7F6C94F7">#7F6C94F7</color>
+    <!--文字颜色-->
+    <color name="black_373737">#373737</color>
+    <!--提示文字颜色-->
+    <color name="gray_AFAFAF">#AFAFAF</color>
+    <color name="black_626262">#626262</color>
+    <!--title文字颜色-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_a50">#88000000</color>
+    <!--主背景-->
+    <color name="bg_grey">#F3F4F5</color>
+    <!--线条-->
+    <color name="gray_E7E7E7">#E7E7E7</color>
+    
+    <color name="blue_6C94F7">#FF6C94F7</color>
+
+</resources>

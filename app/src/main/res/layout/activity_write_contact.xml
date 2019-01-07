@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/common_padding10"
+            android:paddingBottom="@dimen/big1_margin20">
+
+            <TextView
+                android:text="自定义联系人"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size17"
+                android:textColor="@color/black_373737"
+                android:layout_marginTop="@dimen/margin_big20"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:layout_marginRight="@dimen/common_margin10"
+                android:background="@drawable/edit_area_shape"
+                android:layout_marginTop="13dp"
+                android:hint="请输入联系人姓名"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/gray_AFAFAF"
+                android:textColor="@color/black_373737"
+                android:textSize="@dimen/text_size18"/>
+
+            <TextView
+                android:text="联系方式"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size17"
+                android:textColor="@color/black_373737"
+                android:layout_marginTop="@dimen/margin_big20"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_size60"
+                android:layout_marginRight="@dimen/common_margin10"
+                android:background="@drawable/edit_area_shape"
+                android:layout_marginTop="13dp"
+                android:hint="请输入联系电话"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/gray_AFAFAF"
+                android:textColor="@color/black_373737"
+                android:textSize="@dimen/text_size18"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:text="保存"
+            android:layout_marginBottom="20dp"
+            style="@style/sure_button"/>
+
+    </LinearLayout>
+</layout>

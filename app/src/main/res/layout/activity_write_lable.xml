@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cell_size60"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="66dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size16"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/black_373737"
+                android:layout_marginLeft="@dimen/common_margin10"
+                android:text="仓库位置"
+                />
+
+            <EditText
+                android:id="@+id/remark"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:hint="请输入仓库位置"
+                android:gravity="top|left"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black_373737"
+                android:textColorHint="@color/gray_AFAFAF"
+                android:layout_width="0dp"
+                android:maxLength="20"
+                android:layout_height="wrap_content"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/clear_icon"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/common_margin10"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save"
+            style="@style/sure_button"
+            android:focusable="false"
+            android:text="保存"/>
+
+    </LinearLayout>
+</layout>
